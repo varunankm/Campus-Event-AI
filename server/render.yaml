@@ -1,12 +1,9 @@
 services:
   - type: web
     name: campusconnect-api
-    env: dotnet
-    buildCommand: dotnet publish -c Release -o out
-    startCommand: dotnet out/CampusConnectAPI.dll
+    env: docker
+    dockerfilePath: ./server/Dockerfile
     envVars:
-      - key: ASPNETCORE_URLS
-        value: http://0.0.0.0:10000
       - key: MongoDB__ConnectionString
         sync: false
       - key: MongoDB__DatabaseName
@@ -21,3 +18,5 @@ services:
         value: "24"
       - key: Gemini__ApiKey
         sync: false
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:10000
