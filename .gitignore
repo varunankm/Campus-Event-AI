@@ -1,0 +1,18 @@
+# Frontend
+client/node_modules/
+client/dist/
+client/.env
+
+# Backend
+server/bin/
+server/obj/
+server/appsettings.Development.json
+
+# IDE
+.vscode/
+.idea/
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
